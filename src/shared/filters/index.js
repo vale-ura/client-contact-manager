@@ -1,4 +1,4 @@
-import capitalize from './GlobalFilter';
+import capitalize from './capitalize';
 
 export default {
     install(Vue) {
