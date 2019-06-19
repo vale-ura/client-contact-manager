@@ -3,22 +3,21 @@
     <NavBarComponent :name="'Register Contact'"></NavBarComponent>
     <ion-content padding>
       <form @submit="checkForm" action="https://vuejs.org/" method="post">
-        <ion-item>
-          <ion-label position="floating">Nome</ion-label>
+        <ion-item >
+          <ion-label  position="floating">Nome</ion-label>
           <ion-input autofocus placeholder="Digite o nome do contato" type="text" required></ion-input>
         </ion-item>
-        <ion-item>
+        <ion-item class="ion-padding-top">
           <ion-label position="floating">Telefone</ion-label>
           <ion-input placeholder="Digite o seu telefone" type="number" required></ion-input>
-        </ion-item>
-        <ion-item>
+        </ion-item >
+        <ion-item class="ion-padding-top">
           <ion-label position="floating">Email</ion-label>
           <ion-input placeholder="Digite o seu email" type="email" required></ion-input>
         </ion-item>
         <AutoCompleteComponent :list="applications" :selecteds="onSelecteds"></AutoCompleteComponent>
         <ion-item lines="none">
           <ion-button type="submit" size="default" color="primary">Add</ion-button>
-          <ion-button size="default" slot="end" color="danger">Cancel</ion-button>
         </ion-item>
       </form>
     </ion-content>
@@ -47,7 +46,15 @@ export default {
     AutoCompleteComponent
   },
   methods: {
-    onSelecteds() {}
+    onSelecteds() {
+
+    },
+    checkForm() {
+      //console.log(event);
+    },
+    onBack () {
+      
+    }
   },
   mounted() {}
 };
